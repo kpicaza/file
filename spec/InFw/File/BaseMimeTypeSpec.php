@@ -8,7 +8,7 @@ use PhpSpec\ObjectBehavior;
 class BaseMimeTypeSpec extends ObjectBehavior
 {
     const IMAGE_MIME = 'image/jpeg';
-    const IMAGE_PATH = '/../../../../../web/assets/img/fsf-logo.jpg';
+    const IMAGE_PATH = '/../../assets/img/fsf-logo.jpg';
     const GROUP = 'IMAGES';
 
     function it_can_validate_mime_type_staticaly()

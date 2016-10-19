@@ -13,7 +13,7 @@ class GenericFileFactorySpec extends ObjectBehavior
 {
     const SIZE = 340000;
     const NAME = 'my.jpg';
-    const TMP_NAME = __DIR__ . '/../../../../../web/assets/img/fsf-logo.jpg';
+    const TMP_NAME = __DIR__ . '/../../assets/img/fsf-logo.jpg';
     const MIME_TYPE = 'image/jpeg';
     const MIN_SIZE = 230;
     const MAX_SIZE = 740000;

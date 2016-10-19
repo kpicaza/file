@@ -12,7 +12,7 @@ class GenericFileSpec extends ObjectBehavior
 {
     const SIZE = 340000;
     const NAME = 'my.pdf';
-    const TMP_NAME = '/../../../../../web/assets/img/fsf-logo.jpg';
+    const TMP_NAME = '/../../assets/img/fsf-logo.jpg';
     const INVALID_MIME_TYPE = 'application/pdf';
     const MIME_TYPE = 'image/jpeg';
     const MIN_SIZE = 230;

@@ -13,7 +13,7 @@ class Base64FileSpec extends ObjectBehavior
 {
     const SIZE = 340000;
     const NAME = 'my.jpg';
-    const TMP_NAME = '/../../../../../web/assets/img/fsf-logo.jpg';
+    const TMP_NAME = '/../../assets/img/fsf-logo.jpg';
     const MIME_TYPE = 'image/jpeg';
     const MIN_SIZE = 230;
     const MAX_SIZE = 740000;
