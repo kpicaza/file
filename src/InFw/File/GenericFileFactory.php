@@ -16,7 +16,7 @@ class GenericFileFactory implements FileFactoryInterface
     /**
      * Mime type Factory.
      *
-     * @var MimeTypeFactory
+     * @var MimeTypeFactoryInterface
      */
     private $mimeType;
 
@@ -30,11 +30,11 @@ class GenericFileFactory implements FileFactoryInterface
     /**
      * GenericFileFactory constructor.
      *
-     * @param MimeTypeFactory $mimeTypeFactory
+     * @param MimeTypeFactoryInterface $mimeTypeFactory
      * @param SizeFactoryInterface     $sizeFactory
      */
     public function __construct(
-        MimeTypeFactory $mimeTypeFactory,
+        MimeTypeFactoryInterface $mimeTypeFactory,
         SizeFactoryInterface $sizeFactory
     ) {
         $this->mimeType = $mimeTypeFactory;
