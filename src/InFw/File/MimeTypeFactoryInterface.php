@@ -9,7 +9,7 @@ namespace InFw\File;
 /**
  * Interface MimeTypeFactory.
  */
-interface MimeTypeFactory
+interface MimeTypeFactoryInterface
 {
     /**
      * Create new instances of MimeType object.

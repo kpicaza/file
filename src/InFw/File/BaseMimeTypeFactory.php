@@ -9,7 +9,7 @@ namespace InFw\File;
 /**
  * Class BaseMimeTypeFactory.
  */
-class BaseMimeTypeFactory implements MimeTypeFactory
+class BaseMimeTypeFactory implements MimeTypeFactoryInterface
 {
     /**
      * Allowed mime types.
