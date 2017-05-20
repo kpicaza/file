@@ -18,28 +18,28 @@ abstract class AbstractFile implements FileInterface
      *
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * File mime type.
      *
      * @var MimeTypeInterface
      */
-    private $mimeType;
+    protected $mimeType;
 
     /**
      * File size.
      *
      * @var SizeInterface
      */
-    private $size;
+    protected $size;
 
     /**
      * File tmp path name.
      *
      * @var string
      */
-    private $tmpName;
+    protected $tmpName;
 
     /**
      * AbstractFile constructor.
