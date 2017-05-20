@@ -20,7 +20,7 @@ class Base64File extends AbstractFile
      *
      * @var string
      */
-    private $encoded;
+    protected $encoded;
 
     /**
      * Base64File constructor.

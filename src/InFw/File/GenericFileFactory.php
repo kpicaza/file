@@ -18,14 +18,14 @@ class GenericFileFactory implements FileFactoryInterface
      *
      * @var MimeTypeFactoryInterface
      */
-    private $mimeType;
+    protected $mimeType;
 
     /**
      * Size Factory.
      *
      * @var SizeFactoryInterface
      */
-    private $size;
+    protected $size;
 
     /**
      * GenericFileFactory constructor.

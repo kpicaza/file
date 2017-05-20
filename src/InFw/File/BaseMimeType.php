@@ -6,6 +6,8 @@
 
 namespace InFw\File;
 
+use InvalidArgumentException;
+
 /**
  * Class BaseMimeType.
  */
@@ -40,15 +42,21 @@ class BaseMimeType implements MimeTypeInterface
         $this->mime = $mimeType;
     }
 
+    /**
+     * @param string $mimeType
+     */
     protected function assertValidFileMime($mimeType)
     {
         if (false === in_array($mimeType, $this->validMimeTypes, true)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Mime type is not one of valid mime types.' . $mimeType
             );
         }
     }
 
+    /**
+     * @param array $validMimeTypes
+     */
     protected function assertValidMimeTypes(array $validMimeTypes)
     {
         $validTypes = MimeTypes::ALL;
@@ -60,7 +68,7 @@ class BaseMimeType implements MimeTypeInterface
                 })
             )
         ) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Valid mime type array have invalid types.'
             );
         }

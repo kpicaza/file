@@ -16,7 +16,7 @@ class BaseMimeTypeFactory implements MimeTypeFactoryInterface
      *
      * @var array
      */
-    private $validMimeTypes;
+    protected $validMimeTypes;
 
     /**
      * BaseMimeTypeFactory constructor

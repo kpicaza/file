@@ -7,6 +7,7 @@
 namespace InFw\File;
 
 use InFw\Size\SizeInterface;
+use InvalidArgumentException;
 
 /**
  * Class AbstractFile.
@@ -56,13 +57,13 @@ abstract class AbstractFile implements FileInterface
         $this->size = $size;
 
         if (false === file_exists($tmpName)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'File ' . $tmpName . ' does not exists.'
             );
         }
 
         if (false === $this->mimeType->isValid($tmpName, [$this->mimeType->get()])) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'File ' . $tmpName . ' and given mime type don\'t match.'
             );
         }
