@@ -33,6 +33,24 @@ class BaseMimeType implements MimeTypeInterface
      */
     public function __construct($mimeType, array $validMimeTypes)
     {
+        $this->assertValidMimeTypes($validMimeTypes);
+        $this->validMimeTypes = $validMimeTypes;
+
+        $this->assertValidFileMime($mimeType);
+        $this->mime = $mimeType;
+    }
+
+    protected function assertValidFileMime($mimeType)
+    {
+        if (false === in_array($mimeType, $this->validMimeTypes, true)) {
+            throw new \InvalidArgumentException(
+                'Mime type is not one of valid mime types.' . $mimeType
+            );
+        }
+    }
+
+    protected function assertValidMimeTypes(array $validMimeTypes)
+    {
         $validTypes = MimeTypes::ALL;
 
         if (
@@ -47,15 +65,6 @@ class BaseMimeType implements MimeTypeInterface
             );
         }
 
-        $this->validMimeTypes = $validMimeTypes;
-
-        if (false === in_array($mimeType, $this->validMimeTypes, true)) {
-            throw new \InvalidArgumentException(
-                'Mime type is not one of valid mime types.' . $mimeType
-            );
-        }
-
-        $this->mime = $mimeType;
     }
 
     /**
