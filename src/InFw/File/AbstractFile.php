@@ -88,7 +88,7 @@ abstract class AbstractFile implements FileInterface
      */
     public function getMimeType()
     {
-        return $this->mimeType->get();
+        return (string) $this->mimeType;
     }
 
     /**
@@ -98,7 +98,7 @@ abstract class AbstractFile implements FileInterface
      */
     public function getSize()
     {
-        return $this->size->get();
+        return (int) $this->size;
     }
 
     /**

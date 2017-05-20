@@ -27,6 +27,11 @@ class BaseMimeType implements MimeTypeInterface
      */
     protected $mime;
 
+    public function __toString()
+    {
+        return $this->get();
+    }
+
     /**
      * BaseMimeType constructor.
      *
